@@ -41,14 +41,13 @@ My approach to problem 1 is not optimal whatsoever. It starts to lag after 10,00
 # Experimental Evaluation
 I created a couple of methods to verify the correctness of both of my approaches.
 ###### Problem 1
-For this problem, I made use of alot of print statements to ensure every gift was being added and removed from the list ina random and concurrent way. It seems that the algorithm is random, which is what we want, but it's not very concurrent, and appears to sequentially add as many gifts as possible before attempting too remove. 
+For this problem, I made use of alot of print statements to ensure every gift was being added and removed from the list ina random and concurrent way. It seems that the algorithm is random, which is what we want. The issue with the execution is that it's incredibly slow, and it takes a while to run  about half of the expected n value that it should. The average of a couple of runs is listed as follows:
 
-The results were as follows:
 | n     | ---- | Time in ms      |
 | :---        |    :----:   |         :----: |
 | 2      | x       |  4  |
 | 10  | x        | 17      |
-| 100     | x       | 90   |
+| 100     | x       | 75   |
 | 1000      | x       | 352   |
 | 10000     | x       | 4665   |
 | 50000     | x       | 239000   |
